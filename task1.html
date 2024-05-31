@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style1.css">
+</head>
+<body>
+    <div class="main">
+        <p>СЕРВІС ДЛЯ ЗАВАНТАЖЕННЯ ДАНИХ З РЕСУРСУ {JSON} PLACEHOLDER</p>
+        <input type="text" id="enter" placeholder="ENTER URL" oninput="enter()">
+    <div class="loading">
+        <input type="button" value="ЗАВАНТАЖИТИ ДАНІ" id="load" disabled>
+        <input type="button" value="ОЧИСТИТИ" id="clear">
+    </div>
+    <div class="controls" hidden>
+        <p>ДАНІ ФОРМАТУ JSON УСПІШНО ЗАВАНТАЖЕНО. КІЛЬКІСТЬ ЗАПИСІВ РІВНА <span id="count">0</span>.</p>
+        <br><br><br>
+        <p>ВІДОБРАЖАТИ ВАШ ВАРІАНТ ТАБЛИЦІ?</p>
+        <div class="showing">
+            <input type="button" value="ТАК" id="show">
+            <input type="button" value="НІ" id="noshow">
+        </div>
+    </div>
+    <div class="after" hidden>
+        <div class="header">
+            <p>ТАБЛИЦЯ ДЛЯ ВАРІАНТУ 5</p>
+            <input type="button" value="ОЧИСТИТИ СОРТУВАННЯ" id="nosort">
+        </div>
+        <table>
+            <tr>
+                <th onclick="sort_by(0)">ID</th>
+                <th onclick="sort_by(1)">NAME</th>
+                <th onclick="sort_by(2)">ZIPCODE</th>
+                <th id="city" onclick="sort_by(3)">CITY</th>
+            </tr>
+        </table>
+    </div>
+    </div>
+    <script src="scripts/task1.js"></script>
+</body>
+</html>

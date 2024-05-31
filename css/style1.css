@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main {
+    width: 1080px;
+}
+
+p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+input#enter {
+    border: 2px solid lightgray;
+    border-radius: 2px;
+    background-color: rgb(242, 242, 242);
+    padding: 10px;
+    width: 500px;
+}
+
+.loading, .showing {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+} .loading input, .showing input {
+    width: 240px;
+    padding: 10px;
+    border-style: solid;
+    border-color: gray;
+    border-radius: 2px;
+} #load {
+    color: white;
+    background-color: green;
+} #clear {
+    background-color: purple;
+    color: white;
+} #load:disabled {
+    color: #ffffff44
+}
+
+[type=button]:hover:not(:disabled) {
+    cursor: pointer;
+}
+
+#show {
+    background-color: lightgreen;
+    color: black;
+} #noshow {
+    background-color: red;
+    color: white;
+} #nosort {
+    background-color: red;
+    width: 240px;
+    color: white;
+    padding: 10px;
+    border-style: solid;
+    border-radius: 2px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+table {
+    width: 100%;
+    border-spacing: 10px;
+}
+
+tr, th {
+    width: 25%;
+}
+
+th {
+    background-color: rgb(17, 149, 170);
+    border: 2px solid gray;
+    color: white;
+    position: relative;
+}
+
+#city {
+    background-color: rgb(231, 0, 231);
+}
+
+th, td {
+    padding: 10px;
+    border-radius: 2px;
+}
+
+tr:nth-child(even) {
+    background-color: aquamarine;
+}
+tr:nth-child(odd) {
+    background-color: rgb(119, 202, 238);
+}
+
+th:hover {
+    cursor: pointer;
+}
+
+th::before {
+    content: "↓";
+    position: absolute;
+    left: 1em;
+} th::after {
+    content: "↑";
+    position: absolute;
+    right: 1em;
+}
+
+.error_message {
+    padding: 20px;
+    background-color: red;
+    color: white;
+} .error_message:hover {
+    cursor: pointer;
+}
